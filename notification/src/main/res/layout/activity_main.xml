@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/buttonAlert"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Alert Dialog"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:id="@+id/buttonDatePickerDialog"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="DatePickerDialog"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/buttonTimePickerDialog"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="timePickerDialog"
+        android:layout_marginBottom="20dp"/>
+
+
+    <Button
+        android:id="@+id/buttonAlertDialogSelect"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="AlertDialogSelect"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonShowToast"
+        android:text="ShowToast"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonNotification"
+        android:text="notification"
+        android:layout_marginBottom="20dp" />
+
+</LinearLayout>
