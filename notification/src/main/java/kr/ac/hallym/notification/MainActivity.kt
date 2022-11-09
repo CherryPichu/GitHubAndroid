@@ -45,69 +45,69 @@ open class MainActivity : AppCompatActivity() {
         binding.buttonShowToast.setOnClickListener {
             showToast()
         }
-
+        val notify = Notification(this@MainActivity)
         binding.buttonNotification.setOnClickListener {
-            notification()
+            notify.notification()
         }
 
 
 
     }
 
-    fun notification(){
-
-        val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
-        val builder : NotificationCompat.Builder
-
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            val channelId = "one-channel"
-            val channelName = "My channel One"
-            val channel = NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_DEFAULT).apply {
-                description = "My Channel One Description"
-                setShowBadge(true)
-                val uri : Uri =
-                    RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
-                val audioAttributes = AudioAttributes.Builder()
-                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                    .setUsage(AudioAttributes.USAGE_ALARM)
-                    .build()
-                setSound(uri, audioAttributes)
-                enableVibration(true)
-
-            }
-
-            manager.createNotificationChannel(channel)
-
-            builder = NotificationCompat.Builder(this, channelId)
-        }else {
-            builder = NotificationCompat.Builder(this)
-        }
-        builder.run{
-            setSmallIcon(R.drawable.small)
-            setWhen(System.currentTimeMillis())
-            setContentTitle("허남정")
-            setContentText("안녕하세요")
-            setLargeIcon(BitmapFactory.decodeResource(resources, R.drawable.big))
-        }
-
-        val KEY_TEXT_REPLY = "key_text_reply"
-        val replyLabel = "답장"
-        var remoteInput : RemoteInput = RemoteInput.Builder(KEY_TEXT_REPLY).run{
-            setLabel(replyLabel)
-            build()
-        }
-
-        val replyIntent = Intent(this, ReplyReceiver::class.java)
-        val replyPandingIntent = PendingIntent.getBroadcast(this, 30,
-            replyIntent, PendingIntent.FLAG_MUTABLE)
-
-        builder.addAction(
-            NotificationCompat.Action.Builder(
-                R.drawable.send, "답장", replyPandingIntent).addRemoteInput(remoteInput).build()
-        )
-
-        manager.notify(11, builder.build())
-    }
+//    fun notification(){ // Notification에 구현가능.
+//
+//        val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+//        val builder : NotificationCompat.Builder
+//
+//        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+//            val channelId = "one-channel"
+//            val channelName = "My channel One"
+//            val channel = NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_DEFAULT).apply {
+//                description = "My Channel One Description"
+//                setShowBadge(true)
+//                val uri : Uri =
+//                    RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+//                val audioAttributes = AudioAttributes.Builder()
+//                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+//                    .setUsage(AudioAttributes.USAGE_ALARM)
+//                    .build()
+//                setSound(uri, audioAttributes)
+//                enableVibration(true)
+//
+//            }
+//
+//            manager.createNotificationChannel(channel)
+//
+//            builder = NotificationCompat.Builder(this, channelId)
+//        }else {
+//            builder = NotificationCompat.Builder(this)
+//        }
+//        builder.run{
+//            setSmallIcon(R.drawable.small)
+//            setWhen(System.currentTimeMillis())
+//            setContentTitle("허남정")
+//            setContentText("안녕하세요")
+//            setLargeIcon(BitmapFactory.decodeResource(resources, R.drawable.big))
+//        }
+//
+//        val KEY_TEXT_REPLY = "key_text_reply"
+//        val replyLabel = "답장"
+//        var remoteInput : RemoteInput = RemoteInput.Builder(KEY_TEXT_REPLY).run{
+//            setLabel(replyLabel)
+//            build()
+//        }
+//
+//        val replyIntent = Intent(this, ReplyReceiver::class.java)
+//        val replyPandingIntent = PendingIntent.getBroadcast(this, 30,
+//            replyIntent, PendingIntent.FLAG_MUTABLE)
+//
+//        builder.addAction(
+//            NotificationCompat.Action.Builder(
+//                R.drawable.send, "답장", replyPandingIntent).addRemoteInput(remoteInput).build()
+//        )
+//
+//        manager.notify(11, builder.build())
+//    }
 
     @RequiresApi(Build.VERSION_CODES.R)
     fun showToast() {
