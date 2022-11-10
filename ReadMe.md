@@ -21,7 +21,14 @@
 - https://www.youtube.com/watch?v=PIDL7ZD5E_w 
 - 공부중
 - 포그라운드 서비스로 작동하지 않을 경우 안드로이드가 자원관리를 위해 죽일 수 있음.
+
 #### Thread 
 - Thread 기능을 테스트 및 사용.
 - 아직 불안정, 향후 고칠 예정.
+
+#### Retrofit2
+- Network 요청을 자바 인터페이스 형태(어노테이션)으로 사용할 수 있게 만든 라이브러리이다.
+- 기본적으로 REST API 통신을 위해 구현된 라이브러리 입니다.
+- https://kor45cw.tistory.com/5
+- 
 
