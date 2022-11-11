@@ -32,3 +32,7 @@
 - https://kor45cw.tistory.com/5
 - 
 
+#### JetPack
+- JetPackLibrary 기능 테스트
+- 왼쪽 슬라이드 fragment, recyclerView, 햄버거 아이콘(더보기), 검색 아이콘(toolbar)
+

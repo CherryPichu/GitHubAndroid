@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">20205273학번 허남정</string>
+    <string name="draw_open">Draw 화면입니다.</string>
+    <string name="draw_closed">Draw종료</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
