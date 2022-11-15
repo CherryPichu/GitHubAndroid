@@ -44,7 +44,7 @@
   - 스크롤 설정
 - 탭 레이아웃
 - 확장된 플로팅 액션 버튼
-- 네비게이션 뷰 - 드로어 화면 구성
-<img src="./src/meterial.jpg' width="100" />
+- 네비게이션 뷰 - 드로어 화면 구성  
+<img src="./src/meterial.jpg" width="100" />
 
 
