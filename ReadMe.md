@@ -36,3 +36,15 @@
 - JetPackLibrary 기능 테스트
 - 왼쪽 슬라이드 fragment, recyclerView, 햄버거 아이콘(더보기), 검색 아이콘(toolbar)
 
+#### material
+- 구글의 머터리얼 디자인은 모바일과 데스크톱, 그리고 그 밖에 다양한 장치를 아루르는 일관된 애플리케이션 디자인 지침
+- implementation 'com.google.android.material:material:1.7.0'
+- 앱바 레이아웃
+  - 컬랩싱 툴바 레이아웃
+  - 스크롤 설정
+- 탭 레이아웃
+- 확장된 플로팅 액션 버튼
+- 네비게이션 뷰 - 드로어 화면 구성
+<img src="./src/meterial.jpg' width="100" />
+
+
