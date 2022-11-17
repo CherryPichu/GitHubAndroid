@@ -1,6 +1,8 @@
 
 ## GitHubAndroid
 - 언어 : 코틀린
+- 안드로이드의 각종 기능을 테스트 해보고 모듈화시켜 필요할 때 복사할 수 있도록 만들어진 저장소
+- 어떤 제품의 프로토타입이든 높은 생산성으로 찍어내릴 수 있다.
 
 
 #### SQLite CURDModel
@@ -29,8 +31,11 @@
 #### Retrofit2
 - Network 요청을 자바 인터페이스 형태(어노테이션)으로 사용할 수 있게 만든 라이브러리이다.
 - 기본적으로 REST API 통신을 위해 구현된 라이브러리 입니다.
-- https://kor45cw.tistory.com/5
-- 
+- 참고 영상 : json to kotline class
+- 추천 플로그인 : json to kotline class
+  - json -> data 클래스로 변경 (model)
+
+#### 
 
 #### JetPack
 - JetPackLibrary 기능 테스트
