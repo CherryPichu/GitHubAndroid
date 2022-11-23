@@ -31,9 +31,13 @@
 #### Retrofit2
 - Network 요청을 자바 인터페이스 형태(어노테이션)으로 사용할 수 있게 만든 라이브러리이다.
 - 기본적으로 REST API 통신을 위해 구현된 라이브러리 입니다.
-- 참고 영상 : json to kotline class
 - 추천 플로그인 : json to kotline class
   - json -> data 클래스로 변경 (model)
+- 제작 참고 사이트
+  - https://minchanyoun.tistory.com/44
+- not permitted by network security policy 에러 -> 안드로이드에서 http 접근이 안되는 경우
+  - https://gun0912.tistory.com/80
+<img src="./src/Retrofit2RequestPost.png" width="100" />
 
 #### 
 
