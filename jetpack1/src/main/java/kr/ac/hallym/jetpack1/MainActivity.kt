@@ -7,6 +7,8 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.SearchView
+import kr.ac.hallym.jetpack1.databinding.ActivityMainBinding
+import kr.ac.hallym.jetpack1.databinding.FragmentMainBinding
 import kr.ac.hallym.prac07_jetpack_homework.Adapter.MyFragmentViewAdapter
 
 class MainActivity : AppCompatActivity() {

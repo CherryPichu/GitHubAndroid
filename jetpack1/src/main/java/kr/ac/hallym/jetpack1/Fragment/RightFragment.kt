@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import kr.ac.hallym.prac07_jetpack_homework.R
+import kr.ac.hallym.jetpack1.R
 
 class RightFragment : Fragment() {
 

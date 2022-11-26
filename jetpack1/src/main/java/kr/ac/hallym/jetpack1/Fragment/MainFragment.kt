@@ -10,12 +10,10 @@ import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kr.ac.hallym.jetpack1.R
 import kr.ac.hallym.prac07_jetpack_homework.Adapter.MyAdapter
 
-import kr.ac.hallym.prac07_jetpack_homework.MainActivity
-import kr.ac.hallym.prac07_jetpack_homework.R
-import kr.ac.hallym.prac07_jetpack_homework.databinding.ActivityMainBinding
-import kr.ac.hallym.prac07_jetpack_homework.databinding.FragmentMainBinding
+
 import java.security.AccessController.getContext
 
 class MainFragment() : Fragment() {

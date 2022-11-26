@@ -37,12 +37,12 @@
   - https://minchanyoun.tistory.com/44
 - not permitted by network security policy 에러 -> 안드로이드에서 http 접근이 안되는 경우
   - https://gun0912.tistory.com/80
-<img src="./src/Retrofit2RequestPost.png" width="150" />
-
+ <img width="200" alt = "작동화면" src="./src/Retrofit2RequestPost.png">
 
 #### JetPack
 - JetPackLibrary 기능 테스트
 - 왼쪽 슬라이드 fragment, recyclerView, 햄버거 아이콘(더보기), 검색 아이콘(toolbar)
+  <img width="200" alt = "작동화면" src="./src/jetpack_Library.gif">
 
 #### material
 - 구글의 머터리얼 디자인은 모바일과 데스크톱, 그리고 그 밖에 다양한 장치를 아루르는 일관된 애플리케이션 디자인 지침
@@ -53,7 +53,7 @@
 - 탭 레이아웃
 - 확장된 플로팅 액션 버튼
 - 네비게이션 뷰 - 드로어 화면 구성  
-<img src="./src/material.gif" width="150" />
+<img width="200" alt = "작동화면" src="./src/material.gif">
 
 ###  JobSchedular
 - 사용 : https://github.com/codechacha/JobScheduler

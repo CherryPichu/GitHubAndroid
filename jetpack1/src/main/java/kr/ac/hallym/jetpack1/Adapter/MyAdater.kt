@@ -9,11 +9,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import kotlinx.coroutines.NonDisposableHandle.parent
-import kr.ac.hallym.prac07_jetpack_homework.R
-import kr.ac.hallym.prac07_jetpack_homework.databinding.ActivityMainBinding
-import kr.ac.hallym.prac07_jetpack_homework.databinding.FragmentMainBinding
-import kr.ac.hallym.prac07_jetpack_homework.databinding.ItemRecyclerviewBinding
-
+import kr.ac.hallym.jetpack1.databinding.ItemRecyclerviewBinding
 
 
 /**
