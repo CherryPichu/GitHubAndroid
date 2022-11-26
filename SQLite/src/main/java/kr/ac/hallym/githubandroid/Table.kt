@@ -18,7 +18,6 @@ class Table (paramap : MutableMap<Any, Any?>){
 
 
     init { // 테이블 수정
-
         map["id"] = paramap["id"]
     }
 

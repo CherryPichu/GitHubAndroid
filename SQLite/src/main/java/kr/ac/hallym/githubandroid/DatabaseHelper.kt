@@ -27,7 +27,7 @@ class DatabaseHelper private constructor(context: Context) : // private construc
         const val COL2_keyword = "keyword"
         const val COL3_email = "email"
 //        const val COL4_EMAIL = "CreateAt"
-        const val QueryCreateDB = "id INT(64) NOT NULL PRIMARY KEY," +
+        const val QueryCreateDB = "id INT(64) NOT NULL AUTO_INCREMENT PRIMARY KEY ," +
             "keyword VARCHAR(200)  DEFAULT NULL ," +
             "email VARCHAR(50)  DEFAULT NULL ," +
             "createAt DATETIME DEFAULT NULL DEFAULT CURRENT_TIMESTAMP"

@@ -18,7 +18,6 @@ import androidx.core.app.RemoteInput
 import kr.ac.hallym.notification.databinding.ActivityMainBinding
 
 class Notification( val context : Context  ) {
-    private val applicationContext: Context = context.applicationContext
 
 
 
