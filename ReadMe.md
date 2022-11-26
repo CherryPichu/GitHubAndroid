@@ -41,8 +41,9 @@
 
 #### JetPack
 - JetPackLibrary 기능 테스트
-- 왼쪽 슬라이드 fragment, recyclerView, 햄버거 아이콘(더보기), 검색 아이콘(toolbar)
-  <img width="200" alt = "작동화면" src="./src/jetpack_Library.gif">
+- 왼쪽 슬라이드 fragment, recyclerView, 햄버거 아이콘(더보기), 검색 아이콘(toolbar)  
+
+<img width="200" alt = "작동화면" src="./src/jetpack_Library.gif">
 
 #### material
 - 구글의 머터리얼 디자인은 모바일과 데스크톱, 그리고 그 밖에 다양한 장치를 아루르는 일관된 애플리케이션 디자인 지침
