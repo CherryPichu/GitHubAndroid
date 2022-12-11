@@ -17,6 +17,7 @@
 - 개발자는 필요한 기능들이 있는 클래스를 가져와서 사용할 수 있다.
 - 미래에는 애노테이션 기법으로 개발하는 것을 기대  (22.11.08)/ 미래에 내가 해주길 바람.
 - this@MainActiviy 으로 context 맥락을 매개변수로 넘겨주면 Acitivity 밖에 클래스에서 기능 분리 개발이 가능하다.
+<img width="200" alt = "작동화면" src="./src/notification화면.gif">
 
 #### servie (미완성)
 - 서비스 기능 테스트중.
@@ -57,7 +58,12 @@
 <img width="200" alt = "작동화면" src="./src/material.gif">
 
 ###  JobSchedular
-- 사용 : https://github.com/codechacha/JobScheduler
+#### 안드로이드 특정 주기로 계속 동작 방법
+- url : https://wfreud.tistory.com/378
+- AlarmManager, JobScheduler, workmanager 3가지가 존재
+- JobScheduler, workmanager 는 최소 단위가 15분.
+- AlarmManager 는 30초 단위의 동작이 가능하나 대기화면에서 5분에 한번 동작하는 문제가 있음.
+- 해결책 : https://wooyeol.github.io/2019/03/19/Android-Repeat-Background-Service/
 
 
 ### 소개

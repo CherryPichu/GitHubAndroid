@@ -1,9 +1,11 @@
 package kr.ac.hallym.jobscheduler
 
+import android.annotation.TargetApi
 import android.app.job.JobInfo
 import android.app.job.JobScheduler
 import android.content.ComponentName
 import android.content.Context
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -15,42 +17,31 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
-    companion object {
-        private val TAG = "MainActivity"
-        val JOB_ID_A = 100
-        val JOB_ID_B = 200
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
-
-        val js = getSystemService(Context.JOB_SCHEDULER_SERVICE) as JobScheduler
-        val serviceComponent = ComponentName(this, MyJobService::class.java)
 
         binding.btnJob1.setOnClickListener {
-            val js = getSystemService(Context.JOB_SCHEDULER_SERVICE) as JobScheduler
-            val serviceComponent = ComponentName(this, MyJobService::class.java)
-            val jobInfo = JobInfo.Builder(JOB_ID_A, serviceComponent)
-                .setMinimumLatency( TimeUnit.MINUTES.toMillis(1) )
-                .setOverrideDeadline( TimeUnit.MINUTES.toMillis(3) )
-                .build()
-            js.schedule(jobInfo)
-            Log.d(TAG, "Scheduled JobA")
+            onCreateJobScheduler()
         }
 
-        binding.btnJob2.setOnClickListener {
-            val js = getSystemService(Context.JOB_SCHEDULER_SERVICE) as JobScheduler
-            val serviceComponent = ComponentName(this, MyJobService::class.java)
-            val jobInfo = JobInfo.Builder(JOB_ID_B, serviceComponent)
-                .setRequiresDeviceIdle(true)
-                .setRequiresCharging(true)
-                .setPeriodic(TimeUnit.MINUTES.toMillis(15))
-                .build()
-            js.schedule(jobInfo)
-            Log.d(TAG, "Scheduled JobB")
-        }
 
     }
+
+    /**
+     * 15분마다 jobscheduler 알람 실행
+     * onCreate -> onStartJob -> onDestroy 순으로 진행
+     */
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private fun onCreateJobScheduler(){
+        var jobScheduler : JobScheduler? = getSystemService(JOB_SCHEDULER_SERVICE) as JobScheduler
+        val builder = JobInfo.Builder(1, ComponentName(this, MyJobService::class.java))
+            .setPersisted(true)
+            .setPeriodic( TimeUnit.MINUTES.toMillis(15) ) // 15분마다 실행
+            .setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED)
+        val jobInfo = builder.build()
+        jobScheduler!!.schedule(jobInfo)
+    }
+
 }
